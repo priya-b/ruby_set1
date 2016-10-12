@@ -3,3 +3,20 @@
 # If the file does not open or cannot be read, raise an exception with appropraite message.
 
 # P.S - You do not have to create a file through the code. Keep a file ready with some contents.
+
+# f = File.open("testfile.txt")
+begin
+  raise 'A file Exception'
+
+  f=File.open("testfile.txt","r")
+  if f
+    c=f.sysread(5)
+    puts c
+  end
+
+
+rescue Exception => e
+  # handle error
+  puts e.message
+
+end
